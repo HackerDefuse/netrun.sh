@@ -153,6 +153,32 @@
             opacity: 0;
         }
 
+        .project-hover {
+            position: relative;
+            overflow: hidden;
+        }
+        .project-hover::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(0, 255, 0, 0.12);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s cubic-bezier(.4,0,.2,1), height 0.5s cubic-bezier(.4,0,.2,1);
+            z-index: 0;
+        }
+        .project-hover:hover::after {
+            width: 300%;
+            height: 300%;
+        }
+        .project-hover .forum-link, .project-hover button.forum-link {
+            position: relative;
+            z-index: 1;
+        }
+
         .social-links.show {
             height: auto;
             opacity: 1;
@@ -223,7 +249,7 @@
         .social-item:nth-child(2) { transition-delay: 0.2s; }
         .social-item:nth-child(3) { transition-delay: 0.3s; }
 
-        /* About/Skills blocks */
+        /* About/Skills/Projects blocks */
         .info-block {
             background: rgba(0,0,0,0.4);
             border-radius: 12px;
@@ -247,6 +273,32 @@
         .skills-list span {
             font-size: 2rem;
             color: #00FF00;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        @media (min-width: 640px) {
+            .projects-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        .project-card {
+            background: rgba(0,0,0,0.5);
+            border-radius: 8px;
+            padding: 1rem;
+            color: #e0ffe0;
+            border: 1px solid rgba(0,128,0,0.15);
+        }
+        .project-card h3 {
+            color: #00FF00;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .project-card a {
+            color: #00FF00;
+            text-decoration: underline;
         }
         .contact-form input,
         .contact-form textarea {
@@ -350,6 +402,29 @@
                 <span title="Git"><i class="fab fa-git-alt"></i></span>
                 <span title="HTML5"><i class="fab fa-html5"></i></span>
                 <span title="CSS3"><i class="fab fa-css3-alt"></i></span>
+            </div>
+        </div>
+
+        <!-- Projects Block -->
+        <div class="info-block fade-in">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card forum-item project-hover">
+                    <h3>NothingBot</h3>
+                    <p>Telegram AI bot.</p>
+                    <a href="https://t.me/nothinginwww_bot" target="_blank" class="forum-link" style="width:100%;display:block;">
+                        View on Telegram
+                    </a>
+                </div>
+                <!-- Project 2 (In Development) -->
+                <div class="project-card forum-item project-hover">
+                    <h3>In Development</h3>
+                    <p>Stay tuned for new projects!</p>
+                    <button class="forum-link" style="width:100%;display:block;pointer-events:none;opacity:0.7;">
+                        In Development
+                    </button>
+                </div>
             </div>
         </div>
 
