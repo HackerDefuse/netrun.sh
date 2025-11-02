@@ -42,6 +42,5 @@ To deploy manually:
 git add .
 git commit -m "Update site"
 git push origin main
-git add .
 git commit -m "Update site"
 git push origin main
