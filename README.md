@@ -1,6 +1,6 @@
 # 🌐 Mr.Nothing — Personal Link Portal
 
-![Matrix banner](https://github.com/HackerDefuse/netrun.sh/assets/banner.png)
+![Matrix banner](https://github.com/HackerDefuse/netrun.sh/assets/images/banner.png)
 
 ### 💡 About
 **Mr.Nothing** — a minimal cyber-style personal website built using **TailwindCSS**, **FontAwesome**, and **vanilla JavaScript**.  
