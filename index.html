@@ -53,6 +53,23 @@
     </style>
 
     <style>
+    #site-offline-notice {
+     background: #111; /* тёмный фон */
+     color: #eee; /* светлый текст */
+     font-family: Arial, sans-serif;
+     font-size: 15px;
+     text-align: center;
+     padding: 10px;
+     border-top: 2px solid #888; /* тонкая линия сверху */
+     position: fixed;
+     width: 100%;
+     top: 0;
+     left: 0;
+     z-index: 9999;
+    }
+    </style>
+
+    <style>
         .forum-item {
             position: relative;
             overflow: hidden;
@@ -326,6 +343,12 @@
         }
     </style>
 </head>
+
+<div id="site-offline-notice">
+  <strong>Notice:</strong>
+  The owner has temporarily paused work on all projects and is currently completely offline.
+</div>
+
 <body class="bg-background text-foreground">
     <canvas id="matrixCanvas"></canvas>
     <canvas id="particlesCanvas"></canvas>
